@@ -1,0 +1,12 @@
+target/
+project/target/
+project/project/
+
+.metals/
+.bsp/
+.idea/
+.vscode/
+
+output/
+.env
+.claude/
