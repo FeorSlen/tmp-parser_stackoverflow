@@ -1,0 +1,65 @@
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E007] Type Mismatch Error: /home/feor/work/моё/стажировка/1задание менеджер паролей/stackoverflow_parser/src/main/scala/Main.scala:18:4 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m18 |[0m    [33mfor[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m    ^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m    Found:    zio.ZIO[Any, [1m[31mSecurityException[0m, Config][0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m    Required: zio.ZIO[Any, [1m[32mNothing[0m, Config][0m
+[0m[[0m[31merror[0m] [0m[0m[31m19 |[0m      pages       <- System.envOrElse([31m"SO_PAGES"[0m,        [31m"5"[0m).map(_.toInt)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m20 |[0m      pageSize    <- System.envOrElse([31m"SO_PAGE_SIZE"[0m,    [31m"10"[0m).map(_.toInt)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m21 |[0m      sort        <- System.envOrElse([31m"SO_SORT"[0m,         [31m"activity"[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m22 |[0m      order       <- System.envOrElse([31m"SO_ORDER"[0m,        [31m"desc"[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m23 |[0m      outputPath  <- System.envOrElse([31m"SO_OUTPUT_PATH"[0m,  [31m"/data/results"[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m24 |[0m      maxParallel <- System.envOrElse([31m"SO_MAX_PARALLEL"[0m, [31m"3"[0m).map(_.toInt)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m25 |[0m      tagsFile    <- System.envOrElse([31m"SO_TAGS_FILE"[0m,    [31m"tags.txt"[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m26 |[0m      apiKey      <- System.env([31m"SO_API_KEY"[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m27 |[0m    [33myield[0m Config(pages, pageSize, sort, order, outputPath, maxParallel, tagsFile, apiKey)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- Error: /home/feor/work/моё/стажировка/1задание менеджер паролей/stackoverflow_parser/src/main/scala/StackOverflowClient.scala:15:21 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m15 |[0m  [33mval[0m [36mlayer[0m: [35mURLayer[0m[[35mConfig[0m [35m&[0m [35mClient[0m, [35mStackOverflowClient[0m] =[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                     ^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m      Type argument zio.Config does not have the same kind as its bound [0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- Error: /home/feor/work/моё/стажировка/1задание менеджер паролей/stackoverflow_parser/src/main/scala/ResultWriter.scala:10:21 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m10 |[0m  [33mval[0m [36mlayer[0m: [35mURLayer[0m[[35mConfig[0m, [35mResultWriter[0m] =[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                     ^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m      Type argument zio.Config does not have the same kind as its bound [0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- Error: /home/feor/work/моё/стажировка/1задание менеджер паролей/stackoverflow_parser/src/main/scala/ParserOrchestrator.scala:7:21 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m7 |[0m  [33mval[0m [36mlayer[0m: [35mURLayer[0m[[35mConfig[0m [35m&[0m [35mStackOverflowClient[0m [35m&[0m [35mResultWriter[0m, [35mParserOrchestrator[0m] =[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m  |[0m                     ^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m  |[0m        Type argument zio.Config does not have the same kind as its bound [0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E056] Syntax Error: /home/feor/work/моё/стажировка/1задание менеджер паролей/stackoverflow_parser/src/main/scala/ParserOrchestrator.scala:11:10 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m11 |[0m  config: [35mConfig[0m,[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m          ^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m          Missing type parameter for zio.Config[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E056] Syntax Error: /home/feor/work/моё/стажировка/1задание менеджер паролей/stackoverflow_parser/src/main/scala/ResultWriter.scala:13:36 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m13 |[0m[33mcase class[0m [35mResultWriterLive[0m([36mconfig[0m: [35mConfig[0m) [33mextends[0m [35mResultWriter[0m:[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                    ^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                                   Missing type parameter for zio.Config[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E056] Syntax Error: /home/feor/work/моё/стажировка/1задание менеджер паролей/stackoverflow_parser/src/main/scala/StackOverflowClient.scala:18:43 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m18 |[0m[33mcase class[0m [35mStackOverflowClientLive[0m([36mconfig[0m: [35mConfig[0m, [36mhttp[0m: [35mClient[0m) [33mextends[0m [35mStackOverflowClient[0m:[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                           ^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                                   Missing type parameter for zio.Config[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E007] Type Mismatch Error: /home/feor/work/моё/стажировка/1задание менеджер паролей/stackoverflow_parser/src/main/scala/StackOverflowClient.scala:24:6 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m24 |[0m      resp <- http.request([0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m      ^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m    Found:    zio.ZIO[[1m[31mzio[0m[1m[31m.[0m[1m[31mScope[0m, Throwable, SearchResponse][0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m    Required: zio.ZIO[[1m[32mAny[0m, Throwable, SearchResponse][0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m    The following import might make progress towards fixing the problem:[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m      import izumi.reflect.dottyreflection.ReflectionUtil.[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m      reflectiveUncheckedNonOverloadedSelectable[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m25 |[0m                Request.get(url).addHeader([31m"Accept-Encoding"[0m, [31m"identity"[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m26 |[0m              )[0m
+[0m[[0m[31merror[0m] [0m[0m[31m27 |[0m      body <- resp.body.asString[0m
+[0m[[0m[31merror[0m] [0m[0m[31m28 |[0m      result <- resp.status [33mmatch[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m29 |[0m        [33mcase[0m Status.Ok                  => ZIO.fromEither(body.fromJson[SearchResponse])[0m
+[0m[[0m[31merror[0m] [0m[0m[31m30 |[0m                                            .mapError(e => Exception([31ms"JSON parse error: [0m$e[31m"[0m))[0m
+[0m[[0m[31merror[0m] [0m[0m[31m31 |[0m        [33mcase[0m Status.NotFound            => ZIO.fail(SoNotFound(tag, page))[0m
+[0m[[0m[31merror[0m] [0m[0m[31m32 |[0m        [33mcase[0m Status.Forbidden           => ZIO.fail(SoForbidden(tag, page))[0m
+[0m[[0m[31merror[0m] [0m[0m[31m33 |[0m        [33mcase[0m Status.InternalServerError => ZIO.fail(SoServerError(tag, page))[0m
+[0m[[0m[31merror[0m] [0m[0m[31m34 |[0m        [33mcase[0m s                          => ZIO.fail(Exception([31ms"Unexpected HTTP [0m${s.code}[31m for tag=[0m$tag[31m page=[0m$page[31m"[0m))[0m
+[0m[[0m[31merror[0m] [0m[0m[31m35 |[0m    [33myield[0m result[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0m8 errors found[0m
