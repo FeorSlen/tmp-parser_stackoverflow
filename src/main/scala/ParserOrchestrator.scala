@@ -19,7 +19,7 @@ case class ParserOrchestratorLive(
     }
 
   private def processTag(tag: String): Task[Unit] =
-    ZIO.foreachDiscard(1 to config.pages) { page =>
+    ZIO.foreachParDiscard(1 to config.pages) { page =>
       (for
         resp <- client.search(tag, page)
         _    <- writer.write(tag, page, resp)
